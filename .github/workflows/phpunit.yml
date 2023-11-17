@@ -3,11 +3,11 @@ name: Phpunit Integration
 on: [push]
 
 jobs:
-  build:
-   runs-on: ubuntu-latest
-   steps:
-   - uses: actions/ checkout@v2
-   - name : Update composer
+ build:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/ checkout@v2
+  - name : Update composer
    run: composer install --prefer-dist--no-progress --no-suggest
-   - name :Phpunit tests
+  - name :Phpunit tests
    run : vendor/bin/phpunit tests
